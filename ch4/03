@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+class Sum
+{
+	int n1, n2;
+
+public:
+	void init(int x, int y)
+	{
+		n1 = x;
+		n2 = y;
+
+		cout << "첫 번째 정수 : " << n1 << "\n"
+			<< "두 번째 정수 : " << n2 << "\n";
+	}
+	int add()
+	{
+		return (n1 + n2);
+	}
+};
+
+int main()
+{
+	Sum obj;
+
+	obj.init(10, 20);
+	cout << "연산 결과 : " << obj.add() << endl;
+
+	return 0;
+}
