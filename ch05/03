@@ -1,0 +1,73 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Box
+{
+	int length, width, height;
+	bool empty;
+
+public:
+	Box()
+	{
+		length = 0;
+		width = 0;
+		height = 0;
+
+		empty = false;
+	}
+	Box(int l, int w, int h) :length{ l }, width{ w }, height{ h }
+	{
+		empty = true;
+	}
+	int getLength()
+	{
+		return length;
+	}
+	void setLength(int l)
+	{
+		length = l;
+	}
+	int getWidth()
+	{
+		return width;
+	}
+	void setWIdth(int w)
+	{
+		width = w;
+	}
+	int getHeight()
+	{
+		return height;
+	}
+	void setHeight(int h)
+	{
+		height = h;
+	}
+	int getVolume()
+	{
+		return (length * width * height);
+	}
+	void print()
+	{
+		cout << "상자의 길이 : " << getLength() <<
+			"\n" << "상자의 너비 : " << getWidth() <<
+			"\n" << "상자의 높이 : " << getHeight() <<
+			"\n" << "상자의 부피 : " << getVolume() <<
+			"\n" << endl;
+	}
+};
+
+int main()
+{
+	Box b1;
+	Box b2(3, 2, 4);
+
+	cout << "상자 #1" << endl;
+	b1.print();
+
+	cout << "상자 #2" << endl;
+	b2.print();
+
+	return 0;
+}
