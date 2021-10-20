@@ -1,0 +1,69 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Airplane
+{
+	string name;
+	int capacity;
+	double speed;
+
+public:
+	Airplane()
+	{
+		name = "";
+		capacity = 0;
+		speed = 0;
+	}
+	Airplane(string n, int c, double s)
+	{
+		name = n;
+		capacity = c;
+		speed = s;
+	}
+	string getName()
+	{
+		return name;
+	}
+	void setName(string name)
+	{
+		this->name = name;
+	}
+	int getCapacity()
+	{
+		return capacity;
+	}
+	void setCapacity(int capacity)
+	{
+		this->capacity = capacity;
+	}
+	double getSpeed()
+	{
+		return speed;
+	}
+	void setSpeed(double speed)
+	{
+		this->speed = speed;
+	}
+	void print()
+	{
+		cout << "비행기의 이름: " << name <<
+			"\n" << "비행기의 용량: " << capacity <<
+			"\n" << "비행기의 속도: " << speed << " Km/h" << 
+			"\n" << endl;
+	}
+};
+
+int main()
+{
+	Airplane plane1("보잉 787", 900, 300);
+	Airplane plane2("에어버스 350", 400, 1000);
+
+	cout << "비행기 #1" << endl;
+	plane1.print();
+
+	cout << "비행기 #2" << endl;
+	plane2.print();
+
+	return 0;
+}
