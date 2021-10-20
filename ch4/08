@@ -1,0 +1,32 @@
+// ch04_08
+
+#include <iostream>
+using namespace std;
+
+class Complex
+{
+public:
+	double r = 0.0;
+	double i = 0.0;
+
+	void print(double r, double i)
+	{
+		
+		this->r = r;
+		this->i = i;
+
+		if (i < 0)
+			cout << r << "-" << (-i) << "i" << endl;
+		else
+			cout << r << "+" << i << "i" << endl;
+	}
+};
+
+int main()
+{
+	Complex c;
+	
+	c.print(5, 3);
+
+	return 0;
+}
