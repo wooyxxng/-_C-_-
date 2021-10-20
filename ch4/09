@@ -1,0 +1,27 @@
+// ch04_09
+
+#include <iostream>
+using namespace std;
+
+class Triangle
+{
+	int b, h;
+
+public:
+	double area(int b, int h)
+	{
+		this->b = b;
+		this->h = h;
+
+		return (b * h * 0.5);
+	}
+};
+
+int main()
+{
+	Triangle t;
+	 
+	cout << "밑변이 3이고 높이가 4인 삼각형의 면적: " << t.area(3, 4);
+
+	return 0;
+}
