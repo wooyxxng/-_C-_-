@@ -1,0 +1,40 @@
+// ch04_07
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Cellphone
+{
+	bool on;
+	string number;
+	string model;
+	string color;
+
+public:
+	void setting(string n, string m, string c)
+	{
+		number = n;
+		model = m;
+		color = c;
+
+		cout << number << "\n" << model << "\n" << color << endl;
+	}
+	void setOn(bool on)
+	{
+		this->on = on;
+
+		cout << std::boolalpha << on << endl;
+	}
+};
+
+int main()
+{
+	Cellphone c;
+
+	cout << "CellPhone1:" << endl;
+	c.setting("010-1234-5678", "Galaxy", "Black");
+	c.setOn(true);
+
+	return 0;
+}
