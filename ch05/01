@@ -1,0 +1,42 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Book
+{
+	string title;
+	string author;
+
+public:
+	Book(string t, string a)
+	{
+		title = t;
+		author = a;
+	}
+	string getAuthor()
+	{
+		return author;
+	}
+	void setAuthor(string author)
+	{
+		this->author = author;
+	}
+	string getTitle()
+	{
+		return title;
+	}
+	void setTitle(string title)
+	{
+		this->title = title;
+	}
+};
+
+int main()
+{
+	Book b("Great C++", "Bob");
+
+	cout << "책 제목 : " << b.getTitle() << 
+		"\n" << "책 저자 : " << b.getAuthor() << endl;
+
+	return 0;
+}
