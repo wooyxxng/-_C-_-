@@ -1,0 +1,47 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Movie
+{
+	string title;
+	string director;
+	double rating;
+
+public:
+	Movie()
+	{
+		string t = "";
+		string d = "";
+		double r = 0.0;
+	}
+
+	Movie(string t, string d, double r)
+	{
+		title = t;
+		director = d;
+		rating = r;
+	}
+	void print()
+	{
+		cout << "영화 제목: " << title << "\n"
+			<< "영화 감독: " << director << "\n"
+			<< "영화 평점: " << rating << "\n"
+			<< endl;
+	}
+};
+
+int main()
+{
+	Movie m1("타이타닉", "제임스 카메론", 9.5);
+	Movie m2("지오스톰", "딘 데블린", 8.34);
+
+
+	cout << "영화 #1" << endl;
+	m1.print();
+
+	cout << "영화 #2" << endl;
+	m2.print();
+
+	return 0;
+}
